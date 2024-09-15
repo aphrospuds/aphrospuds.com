@@ -1,1 +1,51 @@
-Hello!
+<!DOCTYPE html>
+<html>
+    <head>
+        <script
+			  src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+			  integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
+			  crossorigin="anonymous">
+        </script>
+        <link rel="stylesheet" href="/assets/stylesheets/main.css">
+        <link href="https://fonts.cdnfonts.com/css/chalkduster" rel="stylesheet">
+    </head>
+    <body id="main">
+        <div id="links">
+            <div class="image">
+                <span>Art</span>
+                <img id="sign1" src="/assets/images/hanging_sign.png" alt="" usemap="#sign1">
+                <map name="sign1">
+                    <area shape="rect" coords="10,75,177,150" alt="Art" href="https://twitter.com/AphroSpuds">
+                </map>
+            </div>
+
+            <div class="image">
+                <span>Comms (soon)</span>
+                <img id="sign2" src="/assets/images/hanging_sign2.png" alt="" usemap="#sign2">
+                <map name="sign2">
+                    <area shape="rect" coords="10,75,177,150" alt="Comms (soon)" href="">
+                </map>
+            </div>
+        </div>
+
+        <div>
+            <img src="/assets/images/under_construction_label.png" id="under_construction_label">
+            <img src="/assets/images/website_in_progress.png" id="wip">
+        </div>
+    </body>
+    <script>
+        $(document).ready(function() {
+            $("#links area").on("mouseenter",
+            function() {
+                let name = $(this).parent().attr("name");
+                $("img#"+name).attr("src", "/assets/images/hanging_sign.gif");
+                console.log("Enter!");
+            }).on("mouseleave",
+            function() {
+                let name = $(this).parent().attr("name");
+                $("img#"+name).attr("src", "/assets/images/hanging_sign.png");
+                console.log("Leave!");
+            });
+        });
+    </script>
+</html>

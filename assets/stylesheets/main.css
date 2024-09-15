@@ -1,0 +1,65 @@
+* {
+    cursor: url(/assets/images/cursor.png), auto;
+}
+
+a:hover, area:hover {
+    cursor: url(/assets/images/click.png), auto;
+}
+
+body {
+    background-color: #ffeac3;
+    margin-top: 0px
+}
+
+body#main img#wip {
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -75px;
+    position: relative;
+    z-index: 0;
+}
+
+body#main img#under_construction_label {
+    position:absolute;
+    padding-top: 367px;
+    padding-left: 211px;
+    z-index: 0;
+}
+
+#links {
+    display: flex;
+    justify-content: space-around;
+    z-index: 100;
+    position: relative;
+
+    div.image {
+        position: relative;
+    }
+
+    #blah {
+        width: 46px;
+        height: 44px;
+        background: url(/assets/images/hanging_sign.gif) 0 0;
+    }
+
+    span {
+        position: absolute;
+        top: 86px;
+        left: 30px;
+        width: 100%;
+        font-size: 30px;
+        font-family: Chalkduster, fantasy;
+        z-index:-100;
+    }
+
+    :nth-child(1) span {
+        left: 41px;
+        font-size: 52px;
+    }
+
+    :nth-child(2) span {
+        left: 30px;
+        font-size: 25px;
+    }
+}
