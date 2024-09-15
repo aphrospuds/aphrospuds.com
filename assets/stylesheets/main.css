@@ -11,14 +11,16 @@ body {
     margin-top: 0px
 }
 
-body#main img#wip {
-    display:block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: -75px;
-    position: relative;
-    z-index: 0;
-    :active {
+body#main {
+    img#wip {
+        display:block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: -75px;
+        position: relative;
+        z-index: 0;
+    }
+    img#wip:active {
         transform: scale(0.95);
     }
 }
